@@ -2,7 +2,7 @@
     <form id="signup-form" v-on:submit.prevent="submit">
         <div class="row">
             <div class="col-12 form-group">
-                <label class="col-form-label col-form-label-lg">F Name <span class="text-danger">*</span></label>
+                <label class="col-form-label col-form-label-lg">Full Name <span class="text-danger">*</span></label>
                 <input type="text" v-model.trim="$v.fullname.$model" :class="{'is-invalid': validationStatus($v.fullname)}" class="form-control form-control-lg">
                 <div v-if="!$v.fullname.required" class="invalid-feedback">The full name field is required.</div>
             </div>
@@ -43,7 +43,6 @@ export default {
             fullname: '', 
             lastname: '',
             email: '', 
-            country: '', 
             password: '',
             
         }
